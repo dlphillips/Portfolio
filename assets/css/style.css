@@ -9,6 +9,7 @@ body {
 
 .profile-img {
     border-radius: 15px;
+    width: 180px;
 }
 
 .social {
@@ -84,4 +85,13 @@ hr {
 
 .calendar {
     background-color: white;
+}
+
+#success_message {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-top: 10px;
 }

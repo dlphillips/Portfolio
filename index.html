@@ -6,12 +6,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://use.fontawesome.com/6dcf4bb7b9.js"></script>
     <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="assets/js/app.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+        emailjs.init("user_wWhx5dNmejQcziHuwC3gN");
+    })();
+    </script>
     <title>Dan Phillips - Web Developer</title>
 </head>
 
@@ -19,10 +27,10 @@
     <div class="jumbotron">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-2">
                     <img src="assets/images/UNCC.March31-3_small.jpg" alt="photo" class="profile-img">
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-5">
                     <h1>
                     Dan Phillips
                 </h1>
@@ -30,10 +38,26 @@
                     Web Developer in Training
                 </h2>
                 </div>
+                <div class="col-lg-4">
+                    <ul class="container details">
+                        <li>
+                            <h4><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span>502.291.8867</h4>
+                        </li>
+                        <li>
+                            <h4><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>dlphillips@gmail.com</h4>
+                        </li>
+                        <!--                         <li>
+                            <h4><span class="glyphicon glyphicon-map-marker one" style="width:50px;"></span>placeholder</h4>
+                        </li>
+                        <li>
+                            <h4><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">www.example.com</h4></a>
+                        </li> -->
+                    </ul>
+                </div>
                 <div class="col-lg-1">
                     <ul class="social list-inline">
                         <!--                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
-                        <li><a href="mailto:dlphillips@gmail.com" target="_top"><i class="fa fa-envelope"></i></a></li>
+                        <!--                         <li><a href="mailto:dlphillips@gmail.com" target="_top"><i class="fa fa-envelope"></i></a></li> -->
                         <li><a href="https://www.linkedin.com/in/danphillips1/"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="https://github.com/dlphillips"><i class="fa fa-github"></i></a></li>
                         <!-- <li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li> -->
@@ -129,33 +153,74 @@
         </div>
     </div>
     <div class="container bgShade">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Contact</h2>
+        <form class="form-horizontal" action=" " method="post" id="contact_form">
+            <fieldset>
+                <!-- Form Name -->
+                <h2>Contact Me</h2>
                 <hr>
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="container details">
-                            <li>
-                                <h3><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span>502.291.8867</h3>
-                            </li>
-                            <li>
-                                <h3><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>dlphillips@gmail.com</h3>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="container details">
-                            <li>
-                                <h3><span class="glyphicon glyphicon-map-marker one" style="width:50px;"></span>placeholder</h3>
-                            </li>
-                            <li>
-                                <h3><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">www.example.com</h3></a>
-                            </li>
-                        </ul>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">First Name</label>
+                    <div class="col-md-8 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" class="form-control" type="text">
+                        </div>
                     </div>
                 </div>
-            </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Last Name</label>
+                    <div class="col-md-8 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">E-Mail</label>
+                    <div class="col-md-8 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Phone #</label>
+                    <div class="col-md-8 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="phone" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text area -->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Message</label>
+                    <div class="col-md-8 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <textarea class="form-control" name="comment"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- Success message -->
+                <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting me, I will get back to you shortly.</div>
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-5 control-label"></label>
+                    <div class="col-md-5">
+                        <button type="submit" class="btn btn-info">Send
+                            <!-- <span class="glyphicon glyphicon-send"></span> --></button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
 </body>
 
 </html>
