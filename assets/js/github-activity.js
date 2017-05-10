@@ -137,7 +137,7 @@ var GitHubActivity = (function() {
         // Display separate icons depending on type of create event.
         icon = icons[data.type + '_' + p.ref_type];
       } else {
-        icon = icons[data.type]
+        icon = icons[data.type];
       }
       var activity = { message: message, icon: icon, timeString: timeString, userLink: methods.renderGitHubLink(data.actor.login) };
 

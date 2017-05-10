@@ -95,3 +95,11 @@ ul {
     list-style-type: none;
     padding-top: 10px;
 }
+
+.tcLeft {
+    padding-right: 10px;
+}
+
+.tcRight {
+    padding-left: 10px;
+}
