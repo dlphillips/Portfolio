@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $("#carousel").carousel();
-    GitHubCalendar(".calendar", "dlphillips");
-
+    // GitHubCalendar(".calendar", "dlphillips");
+    GitHubActivity.feed({ username: "dlphillips", selector: "#feed" });
 
     $('#contact_form').bootstrapValidator({
             // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
