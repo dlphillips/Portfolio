@@ -96,10 +96,6 @@ ul {
     padding-top: 10px;
 }
 
-.tcLeft {
-    padding-right: 10px;
-}
-
-.tcRight {
-    padding-left: 10px;
+#myTools {
+    height: 580px;
 }
