@@ -1,270 +1,475 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/github-activity.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/js/github-activity.js"></script>
-    <script src="https://use.fontawesome.com/6dcf4bb7b9.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-    (function() {
-        emailjs.init("user_wWhx5dNmejQcziHuwC3gN");
-    })();
-    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Dan Phillips - Web Developer</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css">
+    <link rel="stylesheet" href="css/github-activity.css">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Template styles -->
+    <style>
+    /* TEMPLATE STYLES */
+    
+    html,
+    body,
+    .view {
+        height: 100%;
+    }
+    /* Navigation*/
+    
+    .navbar {
+        background-color: transparent;
+    }
+    
+    .scrolling-navbar {
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+    
+    .top-nav-collapse {
+        background-color: #3c4f74;
+    }
+    
+    footer.page-footer {
+        background-color: #3c4f74;
+        margin-top: 2rem;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .navbar {
+            background-color: #1C2331;
+        }
+    }
+    /*Call to action*/
+    
+    .flex-center {
+        color: #fff;
+    }
+    
+    .view {
+        background: url("fullscreen.png")no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    /*Contact section*/
+    
+    #contact .fa {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #1C2331;
+    }
+    
+    .scrolling-navbar {
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+    
+    .social-btns {
+        font-size: 120%;
+        letter-spacing: 8px;
+        display: inline;
+    }
+    </style>
 </head>
 
 <body>
-    <div class="jumbotron">
+    <!--Navbar-->
+    <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
         <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <strong>Home</strong>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav1">
+                <ul class="navbar-nav mr-auto">
+                    <!--                     <li class="nav-item active">
+                        <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills & Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+    <!--Mask-->
+    <div class="view hm-black-strong">
+        <div class="full-bg-img flex-center">
+            <ul>
+                <li>
+                    <h1 class="h1-responsive wow fadeInDown" data-wow-delay="0.2s">Dan Phillips</h1></li>
+                <li>
+                    <p class="wow fadeInDown">Web Developer - GIS Professional</p>
+                </li>
+                <li>
+                    <li class="social-btns"><a href="https://www.linkedin.com/in/danphillips1/"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="social-btns"><a href="https://github.com/dlphillips"><i class="fa fa-github"></i></a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/.Mask-->
+    <!-- Main container-->
+    <div class="container" id="about">
+        <div class="divider-new">
+            <h2 class="h2-responsive wow fadeIn" data-wow-delay="0.2s">About me</h2>
+        </div>
+        <!--Section: About-->
+        <section class="text-center wow fadeIn" data-wow-delay="0.2s">
+            <p>I am a full stack web developer with an extensive background in GIS. Originally from Louisville, KY, I relocated to Charlotte, NC in 2014. My undergraduate education was fueled by interests in weather and cartography. This led to degrees in Meteorology and Geography and a very rewarding career as a GIS Professional. </p>
+            <p>Throughout my career, creative problem solving and automating complex procedures are what I have found to be the most rewarding. Web development is a natural progression that allows me to pursue the same creative outlets in new, innovative ways. The current leg of my journey has allowed me to work on a multitude of projects using an abundance of web technologies. I've found that I thrive on learning as much as I can.</p>
+            <p>On the personal side, my free time is spent with family and serving in my church. I was a volunteer leader for the Boy Scouts of America in Louisville and I am proud to say I completed Wood Badge training; the most advanced leadership training course offered by the Boy Scouts of America</p>
+        </section>
+        <!--Section: About-->
+        <div class="divider-new" id="portfolio">
+            <h2 class="h2-responsive wow fadeIn">Portfolio</h2>
+        </div>
+        <!--Section: Portfolio-->
+        <section>
             <div class="row">
-                <div class="col-sm-2">
-                    <img src="assets/images/UNCC.March31-3_small.jpg" alt="photo" class="profile-img">
+                <!--First columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card wow fadeIn medium">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-light hm-zoom">
+                            <img src="img/bs2g.png" class="img-fluid" alt="">
+                            <a href="https://dlphillips.github.io/bakesale2go/" target="_blank">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-block text-center">
+                            <!--Title-->
+                            <h4 class="card-title"></span>BakeSale2Go</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text"><span class="fa fa-trophy"></span></p>
+                            <p class="card-text"><b>UNCC Coding Boot Camp Best Overall Group Project April 2017</b></p>
+                            <p class="card-text">Javascript, Bootstrap, JQuery, Firebase, Leaflet, HTML, CSS</p>
+                        </div>
+                        <!--/.Card content-->
+                    </div>
+                    <!--/.Card-->
                 </div>
-                <div class="col-sm-5">
-                    <h1>
-                    Dan Phillips
-                </h1>
-                    <h2>
-                    Web Developer
-                </h2>
+                <!--First columnn-->
+                <!--Second columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-wow-delay="0.2s">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-light hm-zoom">
+                            <img src="img/gf1.png" class="img-fluid" alt="">
+                            <a href="https://dlphillips.github.io/GIPHY-API-Fun/" target="_blank">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-block text-center">
+                            <!--Title-->
+                            <h4 class="card-title">GIPHY Fun!</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">An exercise in the use of API calls via AJAX. Click a subject button and get matching results from Giphy.</p>
+                            <p>API, AJAX, Bootstrap, JQuery, HTML, CSS</p>
+                        </div>
+                        <!--/.Card content-->
+                    </div>
+                    <!--/.Card-->
                 </div>
-                <div class="col-sm-4">
-                    <ul class="container details">
-                        <li>
-                            <h4><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span>502.291.8867</h4>
+                <!--Second columnn-->
+                <!--Third columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-wow-delay="0.4s">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-light hm-zoom">
+                            <img src="img/trainschedule.png" class="img-fluid" alt="">
+                            <a href="https://dlphillips.github.io/train-schedule/" target="_blank">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-block text-center">
+                            <!--Title-->
+                            <h4 class="card-title">Train Scheduler</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">Google's Firebase is used in this app to store train schedule information. </p>
+                            <p>Firebase, JavaScript, Bootstrap, JQuery, HTML, CSS</p>
+                        </div>
+                        <!--/.Card content-->
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Third columnn-->
+                <!--First columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-wow-delay="0.6s">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-light hm-zoom">
+                            <img src="img/hangman.png" class="img-fluid" alt="">
+                            <a href="https://dlphillips.github.io/Hangman-Game/" target="_blank">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-block text-center">
+                            <!--Title-->
+                            <h4 class="card-title">Hangman Game</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">A JavaScript-powered, fruity hangman game</p>
+                            <p>JavaScript, Bootstrap, JQuery, HTML, CSS</p>
+                        </div>
+                        <!--/.Card content-->
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p> </p>
+                </div>
+            </div>
+            <div class="row">
+                <!--First columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-wow-delay="0.8s">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-light hm-zoom">
+                            <img src="img/triviagame.png" class="img-fluid" alt="">
+                            <a href="https://dlphillips.github.io/TriviaGame/" target="_blank">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-block text-center">
+                            <!--Title-->
+                            <h4 class="card-title">Timed Trivia Game</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">An exercise in JavaScript timer functions.</p>
+                            <p>JavaScript, Bootstrap, JQuery, HTML, CSS</p>
+                        </div>
+                        <!--/.Card content-->
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+                <!--Second columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-wow-delay="1.0s">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-light hm-zoom">
+                            <img src="img/crystalscollector.png" class="img-fluid" alt="">
+                            <a href="https://dlphillips.github.io/week-4-game/" target="_blank">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-block text-center">
+                            <!--Title-->
+                            <h4 class="card-title">Crystals Collector</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">Another JavaScript exercise using random numbers & logic skills.</p>
+                            <p>JavaScript, Bootstrap, JQuery, HTML, CSS</p>
+                        </div>
+                        <!--/.Card content-->
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Second columnn-->
+                <!--Third columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-wow-delay="1.2s">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-light hm-zoom">
+                            <img src="img/eattheburger.png" class="img-fluid" alt="">
+                            <a href="https://github.com/dlphillips/sequelizedBurger" target="_blank">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-block text-center">
+                            <!--Title-->
+                            <h4 class="card-title">Eat-Da-Burger</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">Simple MySQL-powered app that uses Sequelize its ORM.</p>
+                            <p>MySQL, Sequelize, JavaScript, Bootstrap, JQuery, HTML, CSS</p>
+                        </div>
+                        <!--/.Card content-->
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Third columnn-->
+                <!--First columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card wow fadeIn" data-wow-delay="1.4s">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-light hm-zoom">
+                            <img src="img/gds.png" class="img-fluid" alt="">
+                            <a href="http://www.geographicdelivery.com/gds/" target="_blank">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-block text-center">
+                            <!--Title-->
+                            <h4 class="card-title">GDS Company Site</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">Joomla CMS site for Geographic Delivery Service, LLC.</p>
+                            <p>Joomla, MySQL, JavaScript, Leaflet, JQuery, HTML, CSS</p>
+                        </div>
+                        <!--/.Card content-->
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+            </div>
+        </section>
+        <!--/Section: Skills & Activity-->
+        <div class="divider-new">
+            <h2 class="h2-responsive wow fadeIn">Skills & Coding Activity</h2>
+        </div>
+        <section id="skills">
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-6">
+                    <h2 class="h3-responsive wow fadeIn">Web Skills</h3>
+                    <p>Creativity & innovation fuel my desire to learn. My skillset includes the following and the list will continue to grow.</p>
+                    <div class="text-center">
+                        <h5><span class="badge indigo">HTML</span> <span class="badge indigo">CSS</span> <span class="badge indigo">JavaScript</span> <span class="badge indigo">jQuery</span></h5>
+                        <h5><span class="badge indigo">Bootstrap</span> <span class="badge indigo">Node.js</span> <span class="badge indigo">Express</span> <span class="badge indigo">MySQL</span></h5>
+                        <h5><span class="badge indigo">Sequelize</span> <span class="badge indigo">Handlebars</span> <span class="badge indigo">GitHub</span> <span class="badge indigo">Firebase</span></h5>
+                        <h5><span class="badge indigo">Joomla</span> <span class="badge indigo">cPanel</span></h5>
+                    </div>
+                </div>
+                <!--/First column-->
+                <!--Second column-->
+                <div class="col-md-6">
+                    <h3 class="h3-responsive wow fadeIn">GitHub Activity</h3>
+                    <div id="feed">
+                    </div>
+                </div>
+                <!--/Second column-->
+            </div>
+        </section>
+        <!--/Section: Best features-->
+        <div class="divider-new">
+            <h2 class="h2-responsive wow fadeIn">Contact me</h2>
+        </div>
+        <!--Section: Contact-->
+        <section id="contact">
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-4">
+                    <ul class="text-center">
+                        <li class="wow fadeIn" data-wow-delay="0.4s"><i class="fa fa-envelope teal-text"></i>
+                           <p><a href="mailto:dlphillips@gmail.com">dlphillips@gmail.com</a></p>
                         </li>
-                        <li>
-                            <h4><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>dlphillips@gmail.com</h4>
-                        </li>
-                        <!--                         <li>
-                            <h4><span class="glyphicon glyphicon-map-marker one" style="width:50px;"></span>placeholder</h4>
-                        </li>
-                        <li>
-                            <h4><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">www.example.com</h4></a>
-                        </li> -->
                     </ul>
                 </div>
-                <div class="col-sm-1">
-                    <ul class="social list-inline">
-                        <!--                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
-                        <!--                         <li><a href="mailto:dlphillips@gmail.com" target="_top"><i class="fa fa-envelope"></i></a></li> -->
-                        <li><a href="https://www.linkedin.com/in/danphillips1/"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="https://github.com/dlphillips"><i class="fa fa-github"></i></a></li>
-                        <!-- <li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li> -->
+                <!--/Second column-->
+                <div class="col-md-4">
+                    <ul class="text-center">
+                        <li class="wow fadeIn" data-wow-delay="0.2s"><i class="fa fa-map-marker teal-text"></i>
+                            <p>10411 Woodview Cir, Charlotte NC 28277</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--/Second column-->
+                <div class="col-md-4">
+                    <ul class="text-center">
+                        <li class="wow fadeIn" data-wow-delay="0.3s"><i class="fa fa-phone teal-text"></i>
+                            <p>(502) 291-8867</p>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
+        <!--Section: Contact-->
     </div>
-    <div class="container">
-        <div class="col-md-12 bgShade">
-            <h2>Featured Projects</h2>
+    <!--/ Main container-->
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only">
+        <!--Footer Links-->
+        <div class="container-fluid">
+            <div class="row">
+            </div>
+            <!--/.Footer Links-->
             <hr>
-            <div id="carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel" data-slide-to="0"></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
-                    <li data-target="#carousel" data-slide-to="2"></li>
-                    <li data-target="#carousel" data-slide-to="3"></li>
-                    <li data-target="#carousel" data-slide-to="4"></li>
-                    <li data-target="#carousel" data-slide-to="5"></li>
-                </ol>
-                <!-- images need to be 900x500 -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="assets/images/bs2g2.png" alt="Slide 1">
-                        <div class="carousel-caption">
-                            <h4>BakeSale2Go</h4>
-                            <p>Winner of Best Group Project, UNCC Coding Boot Camp. Javascript, Bootstrap, JQuery, Firebase, Leaflet</p><a href="https://dlphillips.github.io/bakesale2go/" target="_blank" class="label label-info">View on GitHub  Pages</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/gf1.png" alt="Slide 2">
-                        <div class="carousel-caption">
-                            <h4>GIPHY Fun</h4>
-                            <p>Click a subject button and get matching results from Giphy. API, AJAX, Bootstrap, JQuery</p><a href="https://dlphillips.github.io/GIPHY-API-Fun/" target="_blank" class="label label-info">View on GitHub  Pages</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/trainschedule.png" alt="Slide 3">
-                        <div class="carousel-caption">
-                            <h4>Train Scheduler</h4>
-                            <p>Add, remove and change train schedules and calculate new arrival times. Javascript, Bootstrap, JQuery, Firebase</p> <a href="https://dlphillips.github.io/train-schedule/" target="_blank" class="label label-info">View on GitHub Pages</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/hangman.png" alt="Slide 4">
-                        <div class="carousel-caption">
-                            <h4>Hangman</h4>
-                            <p>Hangman game made with Javascript, JQuery & Bootstrap</p> <a href="https://dlphillips.github.io/Hangman-Game/" target="_blank" class="label label-info">View on GitHub Pages</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/crystalscollector.png" alt="Slide 5">
-                        <div class="carousel-caption">
-                            <h4>Crystals Collector</h4>
-                            <p>Another game showing logic skills using Javascript, JQuery & Bootstrap</p> <a href="https://dlphillips.github.io/week-4-game/" target="_blank" class="label label-info">View on GitHub Pages</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/triviagame.png" alt="Slide 6">
-                        <div class="carousel-caption">
-                            <h4>Trivia</h4>
-                            <p>Strange law trivia using Javascript, JQuery & Bootstrap</p> <a href="https://dlphillips.github.io/TriviaGame/" target="_blank" class="label label-info">View on GitHub Pages</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="#carousel" class="left carousel-control" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a href="#carousel" class="right carousel-control" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="col-md-12 bgShade">
-            <div class="row">
-                <h2>About Me</h2>
-                <hr>
-                <P>I am originally from Louisville, Kentucky and relocated to Charlotte in 2014. My undergraduate education was fueled by interests in weather and cartography. This led to an Associates Degree in Meteorology from Western Kentucky University and was followed by a Bachelors Degree in Geography from the University of Louisville. There, I focused my studies on an emerging computer technology: Geographic Information Systems.</p>
-                <p>My career thus far has been very fulfilling. Automating complex procedures through either database or GIS technologies is what I have found most rewarding. My current employer is a provider of wall maps and geographic information for restaurants and point of sale systems throught the US & Canada. Processes to automate map creation and data formatting were authored by myself and fellow team members.</p>
-                <p>Throughout my career, I have always liked helping others make well-informed decisions through clear, engaging presentation of data. I see web development as a natural progression that will allow me to provide similar insights in new, innovative ways. </p>
-                <p>On the personal side, my free time is spent with family and serving in my church. I was a volunteer leader for the Boy Scouts of America in Louisville and I am proud to say I completed Wood Badge training; the most advanced leadership training course offered by the Boy Scouts of America. </p>
-                </P>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12 bgShade">
-                    <h2>GitHub Activity</h2>
-                    <hr>
-                    <div id="feed"></div>
+            <!--Copyright-->
+            <div class="footer-copyright">
+                <div class="container-fluid">
+                    © 2017 Copyright: Daniel Phillips 
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="col-md-12 bgShade" id="myTools">
-                    <h2>My Toolbox</h2>
-                    <hr>
-                    <div class="col-md-6">
-                        <h3>Web Tools</h3>
-                        <ul>
-                            <li>JavaScript</li>
-                            <li>jQuery</li>
-                            <li>CSS</li>
-                            <li>HTML</li>
-                            <li>Bootstrap</li>
-                            <li>Node.js</li>
-                            <li>Express</li>
-                            <li>MySQL</li>
-                            <li>Sequelize</li>
-                            <li>Handlebars</li>
-                            <li>GitHub</li>
-                            <li>Google Analytics</li>
-                            <li>Firebase</li>
-                            <li>Joomla</li>
-                            <li>cPanel</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>GIS Tools</h3>
-                        <ul>
-                            <li>MapInfo</li>
-                            <li>MapBasic</li>
-                            <li>Leaflet</li>
-                            <li>QGIS</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="col-md-12 bgShade">
-            <form class="form-horizontal" action=" " method="post" id="contact_form">
-                <fieldset>
-                    <!-- Form Name -->
-                    <h2>Contact Me</h2>
-                    <hr>
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">First Name</label>
-                        <div class="col-md-8 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="first_name" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Last Name</label>
-                        <div class="col-md-8 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="last_name" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">E-Mail</label>
-                        <div class="col-md-8 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Phone #</label>
-                        <div class="col-md-8 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="phone" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Text area -->
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Message</label>
-                        <div class="col-md-8 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                <textarea class="form-control" name="comment"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Success message -->
-                    <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting me, I will get back to you shortly.</div>
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-5 control-label"></label>
-                        <div class="col-md-5">
-                            <button type="submit" class="btn btn-info">Send
-                                <!-- <span class="glyphicon glyphicon-send"></span> --></button>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
+            <!--/.Copyright-->
+    </footer>
+    <!--/.Footer-->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script type="text/javascript" src="js/github-activity.js"></script>
+    <!-- Animations init-->
+    <script>
+    new WOW().init();
+    GitHubActivity.feed({
+        username: "dlphillips",
+        selector: "#feed",
+        limit: 5 // optional
+    });
+    </script>
 </body>
 
 </html>

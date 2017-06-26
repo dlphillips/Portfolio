@@ -1,0 +1,16 @@
+/* YOUR CUSTOM STYLES */
+
+ul {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.fa {
+	font-size: 200%;
+	letter-spacing: 8px;
+	    display: inline;
+}
+
+
