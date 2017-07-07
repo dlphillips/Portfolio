@@ -13,4 +13,9 @@ ul {
 	    display: inline;
 }
 
+@media (max-width: 991px){
+    .col-lg-6{
+        margin-bottom: 10px;
+    }  
+}
 
